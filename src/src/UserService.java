@@ -1,6 +1,7 @@
 public class UserService {
     public String getUser() {
-        return "User from main branch";
+        return "User from feature branch";
+
     }
 
     public static void main(String[] args) {
