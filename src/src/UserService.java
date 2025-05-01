@@ -1,9 +1,7 @@
-public class UserService {
-    public String getUser() {
-        return "User from main branch";
-    }
-
+public class UserServiceTest {
     public static void main(String[] args) {
-        System.out.println(new UserService().getUser());
+        UserService service = new UserService();
+        assert service.getUser().contains("User") : "Test failed!";
+        System.out.println("Test passed.");
     }
 }

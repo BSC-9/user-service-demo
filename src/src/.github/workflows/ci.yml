@@ -1,0 +1,14 @@
+name: Java CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Compile Java
+      run: javac src/UserService.java src/UserServiceTest.java
+    - name: Run Test
+      run: java -ea src/UserServiceTest
